@@ -1,8 +1,16 @@
+require './solver'
 describe Solver do
   let(:solver) { Solver.new }
 
-  it 'should factorize num' do
+  it 'checks if the number is negative' do
     expect { solver.factorize(-1) }.to raise_error ArgumentError
+  end
+
+  it 'should return the factorial of a n number' do
+    expect(solver.factorize(5)).to be 120
+    expect(solver.factorize(10)).to be 3_628_800
+    expect(solver.factorize(3)).to be 6
+    expect(solver.factorize(7)).to be 5040
   end
 
   it 'reverses a string' do
