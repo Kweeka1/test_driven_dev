@@ -2,7 +2,7 @@ describe Solver do
   let(:solver) { Solver.new }
 
   it 'should factorize num' do
-    expect { solver.factorize(1) }.to raise_error ArgumentError
+    expect { solver.factorize(-1) }.to raise_error ArgumentError
   end
 
   it 'reverses a string' do
